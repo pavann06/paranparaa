@@ -6,6 +6,16 @@ import { elegantMultipage } from "@/data/menu";
 import Link from "next/link";
 import RelatedProjects6 from "@/components/portfolio/relatedProjects/RelatedProjects6";
 import { allPortfolios } from "@/data/portfolio";
+
+import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
+
 export const metadata = {
   title:
     "Elegant Portfolio Single || Resonance &mdash; One & Multi Page React Nextjs Creative Template",

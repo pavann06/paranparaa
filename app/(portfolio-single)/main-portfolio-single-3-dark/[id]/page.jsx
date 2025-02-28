@@ -11,6 +11,16 @@ import { menuItemsDark } from "@/data/menu";
 import RelatedProject10 from "@/components/portfolio/relatedProjects/RelatedProject10";
 import Slider1 from "@/components/portfolio/sliders/Slider1";
 import { allPortfolios } from "@/data/portfolio";
+
+import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
+
 export const metadata = {
   title:
     "Main Portfolio Single Page 3 Dark || Resonance &mdash; One & Multi Page React Nextjs Creative Template",

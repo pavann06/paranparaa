@@ -7,6 +7,15 @@ import { modernMultipage } from "@/data/menu";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { allPortfolios } from "@/data/portfolio";
+
+import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
 export const metadata = {
   title:
     "Modern Portfolio Single|| Resonance &mdash; One & Multi Page React Nextjs Creative Template",

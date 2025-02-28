@@ -7,6 +7,16 @@ import { corporateMultipage, corporateMultipageDark } from "@/data/menu";
 
 import RelatedProjects7 from "@/components/portfolio/relatedProjects/RelatedProjects7";
 import { allPortfolios } from "@/data/portfolio";
+
+import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
+
 export const metadata = {
   title:
     "Corporate Portfolio Single Dark || Resonance &mdash; One & Multi Page React Nextjs Creative Template",

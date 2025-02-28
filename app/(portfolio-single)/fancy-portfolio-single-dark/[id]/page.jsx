@@ -6,6 +6,16 @@ import Link from "next/link";
 import { fancyMultipage, fancyMultipageDark } from "@/data/menu";
 import Image from "next/image";
 import { allPortfolios } from "@/data/portfolio";
+
+import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
+
 export const metadata = {
   title:
     "Fancy Portfolio Single Dark || Resonance &mdash; One & Multi Page React Nextjs Creative Template",

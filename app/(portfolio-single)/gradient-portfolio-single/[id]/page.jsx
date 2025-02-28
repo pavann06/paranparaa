@@ -5,6 +5,16 @@ import Link from "next/link";
 import { gradientMultipage } from "@/data/menu";
 import Image from "next/image";
 import { allPortfolios } from "@/data/portfolio";
+
+import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
+
 export const metadata = {
   title:
     "Gradient Portfolio Single || Resonance &mdash; One & Multi Page React Nextjs Creative Template",
