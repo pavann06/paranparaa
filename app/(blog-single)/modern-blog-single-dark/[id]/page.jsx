@@ -11,6 +11,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
+import Header1Multipage from "@/components/headers/Header1Multipage";
 import { allBlogs } from "@/data/blogs";
 
 export async function generateStaticParams() {
