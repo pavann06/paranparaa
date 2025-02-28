@@ -8,6 +8,16 @@ import dynamic from "next/dynamic";
 import { allPortfolios } from "@/data/portfolio";
 import Link from "next/link";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
+
+import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
+
 export const metadata = {
   title:
     "Brutalist Portfolio Single Dark || Resonance &mdash; One & Multi Page React Nextjs Creative Template",
