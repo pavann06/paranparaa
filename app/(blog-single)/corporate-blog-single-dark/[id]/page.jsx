@@ -11,6 +11,13 @@ import Widget1 from "@/components/blog/widgets/Widget1";
 import Form3 from "@/components/blog/commentForm/Form3";
 import Comments from "@/components/blog/Comments";
 import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
 export const metadata = {
   title:
     "Corporate Blog Single Dark || Resonance &mdash; One & Multi Page React Nextjs Creative Template",

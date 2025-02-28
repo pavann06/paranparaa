@@ -8,6 +8,13 @@ import Comments from "@/components/blog/Comments";
 import Form4 from "@/components/blog/commentForm/Form4";
 import Widget1 from "@/components/blog/widgets/Widget1";
 import { allBlogs } from "@/data/blogs";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
 export const metadata = {
   title:
     "Elegant Blog Single Dark || Resonance &mdash; One & Multi Page React Nextjs Creative Template",

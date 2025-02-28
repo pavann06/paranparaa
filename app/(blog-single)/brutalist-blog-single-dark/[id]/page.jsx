@@ -14,6 +14,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { allBlogs } from "@/data/blogs";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(), // Ensure IDs are strings
+  }));
+}
+
 export const metadata = {
   title:
     "Brutalist Blog Single Dark || Resonance &mdash; One & Multi Page React Nextjs Creative Template",

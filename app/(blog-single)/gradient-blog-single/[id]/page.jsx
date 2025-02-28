@@ -16,6 +16,13 @@ import Link from "next/link";
 import { allBlogs } from "@/data/blogs";
 const onePage = false;
 const dark = false;
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
 export const metadata = {
   title:
     "Gradient Blogs Single || Resonance &mdash; One & Multi Page React Nextjs Creative Template",
