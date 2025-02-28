@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import { allPortfolios } from "@/data/portfolio";
 import React from "react";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
+import { allBlogs } from "@/data/blogs";
 
 export async function generateStaticParams() {
   return allBlogs.map((blog) => ({

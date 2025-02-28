@@ -5,6 +5,7 @@ import RelatedProject9 from "@/components/portfolio/relatedProjects/RelatedProje
 import Image from "next/image";
 import { boldMultipage } from "@/data/menu";
 import dynamic from "next/dynamic";
+import { allBlogs } from "@/data/blogs";
 
 import React from "react";
 import { allPortfolios } from "@/data/portfolio";
