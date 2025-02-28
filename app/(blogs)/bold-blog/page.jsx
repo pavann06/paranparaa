@@ -11,6 +11,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
+
+
+
 export const metadata = {
   title:
     "Bold Blog || Resonance &mdash; One & Multi Page React Nextjs Creative Template",
