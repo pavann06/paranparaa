@@ -4,7 +4,6 @@ const nextConfig = {
   basePath: '/paranparaa',
   images: {
     unoptimized: true,
-    
   },
 };
 
