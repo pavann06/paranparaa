@@ -9,6 +9,12 @@ import { strongMultiPages } from "@/data/menu";
 import { allBlogs } from "@/data/blogs";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
 
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
 export const metadata = {
   title:
     "Home 10 Blog Single || Resonance &mdash; One & Multi Page React Nextjs Creative Template",
